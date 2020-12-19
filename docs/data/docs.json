@@ -1518,7 +1518,8 @@
           "table": true,
           "strikethrough": true,
           "linkify": true,
-          "taskList": true
+          "taskList": true,
+          "mathJax": false
         }
       },
       "blackFriday": {

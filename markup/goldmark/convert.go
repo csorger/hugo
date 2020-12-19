@@ -39,6 +39,8 @@ import (
 	"github.com/yuin/goldmark/renderer/html"
 	"github.com/yuin/goldmark/text"
 	"github.com/yuin/goldmark/util"
+
+	mathjax "github.com/litao91/goldmark-mathjax"
 )
 
 // Provider is the package entry point.
@@ -141,6 +143,10 @@ func newMarkdown(pcfg converter.ProviderConfig) goldmark.Markdown {
 
 	if cfg.Parser.Attribute {
 		parserOptions = append(parserOptions, parser.WithAttribute())
+	}
+
+	if cfg.Extensions.MathJax {
+		extensions = append(extensions, mathjax.MathJax)
 	}
 
 	md := goldmark.New(

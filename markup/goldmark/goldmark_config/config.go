@@ -30,6 +30,7 @@ var Default = Config{
 		Strikethrough:  true,
 		Linkify:        true,
 		TaskList:       true,
+		MathJax:        false,
 	},
 	Renderer: Renderer{
 		Unsafe: false,
@@ -58,6 +59,9 @@ type Extensions struct {
 	Strikethrough bool
 	Linkify       bool
 	TaskList      bool
+
+	// MathJax litao91/goldmark-mathjax
+	MathJax bool
 }
 
 type Renderer struct {
